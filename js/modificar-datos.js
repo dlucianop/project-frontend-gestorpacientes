@@ -41,4 +41,5 @@ function modificarDatos(numero, nombre, peso, altura, gordura) {
     paciente.querySelector(".info-peso").textContent = peso;
     paciente.querySelector(".info-altura").textContent = altura;
     paciente.querySelector(".info-gordura").textContent = gordura;
+    paciente.setAttribute("class", "paciente");
 }

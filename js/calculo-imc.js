@@ -23,6 +23,7 @@ function getPaciente() {
         var verificacionAltura = validationAltura(parseFloat(altura));
 
         if (verificacionPeso == true && verificacionAltura) {
+            paciente.classList.add("paciente-correcto");
             var imcPaciente = imc(parseFloat(peso), parseFloat(altura));
             /*console.log(imcPaciente)*/
             paciente.querySelector(".info-imc").textContent = imcPaciente;
