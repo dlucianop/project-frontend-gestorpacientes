@@ -43,4 +43,45 @@ function getPaciente() {
     }
 }
 
+var btn_adicionar = document.querySelector("#adicionar-paciente");
+btn_adicionar.addEventListener("click", function (event) {
+    event.preventDefault();
+    var form = document.getElementById("form-adicionar");
+    
+    var nombre = form.nombre.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+
+    pacienteTr = document.createElement("tr");
+    nombreTd = document.createElement("td");
+    alturaTd = document.createElement("td");
+    pesoTd = document.createElement("td");
+    gorduraTd = document.createElement("td");
+    imcTd = document.createElement("td");
+
+    pacienteTr.classList.add("paciente");
+
+    nombreTd.textContent = nombre;
+    nombreTd.classList.add("info-nombre");
+    alturaTd.textContent = altura;
+    alturaTd.classList.add("info-altura");
+    pesoTd.textContent = peso;
+    pesoTd.classList.add("info-peso");
+    gorduraTd.textContent = gordura;
+    gorduraTd.classList.add("info-gordura");
+
+    gorduraTd.classList.add("info-imc");
+
+    pacienteTr.appendChild(nombreTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+    pacienteTr.appendChild(imcTd);
+
+    var tabla = document.getElementById("tabla-pacientes");
+    console.log(pacienteTr)
+    tabla.appendChild(pacienteTr);
+});
+
 getPaciente();
