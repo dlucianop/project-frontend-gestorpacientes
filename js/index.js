@@ -30,11 +30,13 @@ function getPaciente() {
             paciente.querySelector(".info-imc").textContent = imcPaciente;
         } else {
             alert(nombre + " tiene un dato irreal, favor de ingresar informacion correcta.");
-            if (validationPeso == false) {
-                paciente.querySelector(".info-imc").textContent = "Peso Incorrecto";
+            //CSS - cambio de color
+            paciente.classList.add("paciente-incorrecto");
+            if (verificacionPeso == false) {
+                paciente.querySelector(".info-imc").textContent = "Peso No Valido";
             }
-            if (validationAltura == false) {
-                paciente.querySelector(".info-imc").textContent = "Altura Incorrecta";
+            if (verificacionAltura == false) {
+                paciente.querySelector(".info-imc").textContent = "Altura No Valida";
             }
         }
         
