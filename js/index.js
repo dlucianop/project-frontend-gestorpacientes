@@ -4,17 +4,30 @@ function imc(peso, altura) {
     return (peso / (altura * altura)).toFixed(2);
 }
 
+function validationData(peso, altura) {
+    // para signo OR se usa las teclas ALT+124
+    return (peso > 0 && peso < 1000) && (altura > 0 && altura < 3)
+}
+
 function getPaciente() {
-    for (i = 1; i < num_pacientes+1; i++){
+    for (i = 1; i <= num_pacientes; i++){
         var paciente = document.getElementById(i);
+        var nombre = paciente.querySelector(".info-nombre").textContent;
         var peso = paciente.querySelector(".info-peso").textContent;
         var altura = paciente.querySelector(".info-altura").textContent;
 
-        var imcPaciente = imc(parseFloat(peso), parseFloat(altura))
-        console.log(imcPaciente)
+        var verificacion = validationData(parseFloat(peso), parseFloat(altura));
 
-        paciente.querySelector(".info-imc").textContent = imcPaciente;
+        if (verificacion == true) {
+            var imcPaciente = imc(parseFloat(peso), parseFloat(altura));
+            /*console.log(imcPaciente)*/
+            paciente.querySelector(".info-imc").textContent = imcPaciente;
+        } else {
+            alert(nombre + " tiene un dato irreal, favor de ingresar informacion correcta.");
+            paciente.querySelector(".info-imc").textContent = "NULO";
+        }
+        
     }
 }
 
-console.log(getPaciente());
+getPaciente();
