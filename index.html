@@ -21,6 +21,7 @@
 				<table>
 					<thead>
 						<tr>
+							<th>#</th>
 							<th>Nombre</th>
 							<th>Peso(kg)</th>
 							<th>Altura(m)</th>
@@ -30,6 +31,7 @@
 					</thead>
 					<tbody id="tabla-pacientes">
 						<tr class="paciente" id="1">
+							<td class="info-numero">1</td>
 							<td class="info-nombre">Pablo</td>
 							<td class="info-peso">100</td>
 							<td class="info-altura">2.00</td>
@@ -38,6 +40,7 @@
 						</tr>
 
 						<tr class="paciente" id="2">
+							<td class="info-numero">2</td>
 							<td class="info-nombre">Juan</td>
 							<td class="info-peso">82</td>
 							<td class="info-altura">1.72</td>
@@ -46,6 +49,7 @@
 						</tr>
 
 						<tr class="paciente" id="3">
+							<td class="info-numero">3</td>
 							<td class="info-nombre">Erica</td>
 							<td class="info-peso">54</td>
 							<td class="info-altura">1.64</td>
@@ -54,6 +58,7 @@
 						</tr>
 
 						<tr class="paciente" id="4">
+							<td class="info-numero">4</td>
 							<td class="info-nombre">Diego</td>
 							<td class="info-peso">85</td>
 							<td class="info-altura">1.73</td>
@@ -61,6 +66,7 @@
 							<td class="info-imc">0</td>
 						</tr>
 						<tr class="paciente" id="5">
+							<td class="info-numero">5</td>
 							<td class="info-nombre">Tatiana</td>
 							<td class="info-peso">46</td>
 							<td class="info-altura">1.55</td>
@@ -81,23 +87,50 @@
 					</div>
 					<div class="grupo">
 						<label for="peso">Peso:</label>
-						<input id="peso" name="peso" type="text" placeholder="digite el peso del paciente" class="campo campo-medio">
+						<input id="peso" name="peso" type="number" placeholder="digite el peso del paciente" class="campo campo-medio">
 					</div>
 					<div class="grupo">
 						<label for="altura">Altura:</label>
-						<input id="altura" name="altura" type="text" placeholder="digite la altura del paciente" class="campo campo-medio">
+						<input id="altura" name="altura" type="number" placeholder="digite la altura del paciente" class="campo campo-medio">
 					</div>
 					<div class="grupo">
 						<label for="gordura">% de Gordura:</label>
-						<input id="gordura" type="text" placeholder="digite el porcentaje de gordura del paciente" class="campo campo-medio">
+						<input id="gordura" type="number" placeholder="digite el porcentaje de gordura del paciente" class="campo campo-medio">
 					</div>
 					<button id="adicionar-paciente" class="boton bto-principal">Adicionar</button>
+				</form>
+			</section>
+
+			<section class="container">
+				<h2 id="titulo-form">Modificar datos de un paciente</h2>
+				<form id="form-modify">
+					<div class="grupo">
+						<label for="numero">Numero:</label>
+						<input id="numero" name="numero" type="number" placeholder="digite el numero de paciente" class="campo">
+					</div>
+					<div class="grupo">
+						<label for="nombre">Nombre:</label>
+						<input id="nombre" name="nombre" type="text" placeholder="digite el nombre del paciente" class="campo">
+					</div>
+					<div class="grupo">
+						<label for="peso">Peso:</label>
+						<input id="peso" name="peso" type="number" placeholder="digite el peso del paciente" class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="altura">Altura:</label>
+						<input id="altura" name="altura" type="number" placeholder="digite la altura del paciente" class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="gordura">% de Gordura:</label>
+						<input id="gordura" type="number" placeholder="digite el porcentaje de gordura del paciente" class="campo campo-medio">
+					</div>
+					<button id="modificar-paciente" class="boton bto-principal">Modificar</button>
 				</form>
 			</section>
 		</main>
 
 		<script src="./js/calculo-imc.js"></script>
 		<script src="./js/form.js"></script>
-
+		<script src="./js/modificar-datos.js"></script>
 	</body>
 </html>

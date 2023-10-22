@@ -10,6 +10,7 @@ btn_adicionar.addEventListener("click", function (event) {
     var gordura = form.gordura.value;
 
     pacienteTr = document.createElement("tr");
+    numeroTd = document.createElement("td");
     nombreTd = document.createElement("td");
     alturaTd = document.createElement("td");
     pesoTd = document.createElement("td");
@@ -17,8 +18,9 @@ btn_adicionar.addEventListener("click", function (event) {
     imcTd = document.createElement("td");
 
     pacienteTr.classList.add("paciente");
-    pacienteTr.setAttribute("id", num_pacientes.length+1);
-
+    pacienteTr.setAttribute("id", num_pacientes.length + 1);
+    numeroTd.textContent = num_pacientes.length + 1;
+    numeroTd.classList.add("info-numero");
     nombreTd.textContent = nombre;
     nombreTd.classList.add("info-nombre");
     alturaTd.textContent = altura;
@@ -30,6 +32,7 @@ btn_adicionar.addEventListener("click", function (event) {
 
     imcTd.classList.add("info-imc");
 
+    pacienteTr.appendChild(numeroTd);
     pacienteTr.appendChild(nombreTd);
     pacienteTr.appendChild(pesoTd);
     pacienteTr.appendChild(alturaTd);
