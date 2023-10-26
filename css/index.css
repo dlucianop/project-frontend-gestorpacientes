@@ -140,3 +140,11 @@ button[disabled=disabled], button:disabled {
 .paciente-correcto{
 	background-color: white;
 }
+
+tr {
+    cursor: pointer; 
+}
+
+tr.fade-out {
+    background-color: rgba(255, 0, 0, 0.2);
+}

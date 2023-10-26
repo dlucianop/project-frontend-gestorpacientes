@@ -10,6 +10,8 @@ btn_adicionar.addEventListener("click", function (event) {
     var tabla = document.getElementById("tabla-pacientes");
     tabla.appendChild(pacienteTr);
 
+    //console.log(tabla);
+
     alert("Se agrego un nuevo paciente");
     imcComprobation();
     form.reset();
