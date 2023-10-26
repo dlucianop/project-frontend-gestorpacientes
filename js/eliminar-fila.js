@@ -5,7 +5,8 @@ tabla.addEventListener("dblclick", function (event) {
         var confirmacion = confirm("¿Seguro que deseas eliminar esta fila?");
         if (confirmacion) {
             //console.log(fila);
-            var r = recorridoFila(fila);
+            recorridoFila(fila);
+            console.log("Fila eliminada")
             fila.classList.add('fade-out');
                 setTimeout(function () {
                     fila.remove();

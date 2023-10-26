@@ -141,8 +141,12 @@ button[disabled=disabled], button:disabled {
 	background-color: white;
 }
 
-tr {
+tr.paciente {
     cursor: pointer; 
+}
+
+tr.paciente:hover {
+    color: red; 
 }
 
 tr.fade-out {

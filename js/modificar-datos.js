@@ -10,7 +10,9 @@ btn_modificar.addEventListener("click", function (event) {
         alert("Datos del paciente " + paciente.nombre + " modificados existosamente.");
         modificarDatos(paciente.numero, paciente.nombre, paciente.peso, paciente.altura, paciente.gordura);
         imcComprobation();
+        console.log("Modificación de datos exitosa.");
     } else {
+        console.log("Modificación de datos no realizada.");
         alert("No hay coincidencias, revise si existe el numero de paciente.");
     }
 });

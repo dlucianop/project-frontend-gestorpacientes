@@ -13,6 +13,7 @@ btn_adicionar.addEventListener("click", function (event) {
     //console.log(tabla);
 
     alert("Se agrego un nuevo paciente");
+    console.log("Se agrego datos de un paciente");
     imcComprobation();
     form.reset();
 });
