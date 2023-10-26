@@ -3,22 +3,28 @@ btn_modificar.addEventListener("click", function (event) {
     event.preventDefault();
 
     var form = document.getElementById("form-modify");
-    
-    var numero = form.numero.value;
-    var nombre = form.nombre.value;
-    var peso = form.peso.value;
-    var altura = form.altura.value;
-    var gordura = form.gordura.value;
+    var paciente = capturaDatos(form);
 
-    var validacion = verificarExistencia(numero, nombre);
+    var validacion = verificarExistencia(paciente.numero, paciente.nombre);
     if (validacion == true) {
-        alert("Datos del paciente " + nombre + " modificados existosamente.");
-        modificarDatos(numero, nombre, peso, altura, gordura);
-        getPaciente();
+        alert("Datos del paciente " + paciente.nombre + " modificados existosamente.");
+        modificarDatos(paciente.numero, paciente.nombre, paciente.peso, paciente.altura, paciente.gordura);
+        imcComprobation();
     } else {
         alert("No hay coincidencias, revise si existe el numero de paciente.");
     }
 });
+
+function capturaDatos(form) {
+    var paciente = {
+        numero: form.numero.value,
+        nombre: form.nombre.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+    }
+    return paciente;
+}
 
 function verificarExistencia(numero, nombre) {
     var num_pacientes = document.getElementsByClassName("paciente");

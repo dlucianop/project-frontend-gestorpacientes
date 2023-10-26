@@ -11,7 +11,7 @@ function validationAltura(altura) {
     return (altura > 0 && altura < 3)
 }
 
-function getPaciente() {
+function imcComprobation() {
     var num_pacientes = document.getElementsByClassName("paciente");
     for (i = 1; i <= num_pacientes.length; i++){
         var paciente = document.getElementById(i);
@@ -45,4 +45,4 @@ function getPaciente() {
     }
 }
 
-getPaciente();
+imcComprobation();
