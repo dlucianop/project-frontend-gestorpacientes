@@ -176,3 +176,8 @@ tr.fade-out {
 	justify-content: space-between;
 	width: 100%;
 }
+
+.td-coincidencia {
+	background-color: green;
+	color: whitesmoke;
+}

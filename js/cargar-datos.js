@@ -22,7 +22,7 @@ document.getElementById('cargarArchivo').addEventListener('click', function () {
                     imcComprobation();
                 }
                 alert("Se agregaron nuevos datos");
-                console.log(tabla);
+                //console.log(tabla);
             };
         }
     });

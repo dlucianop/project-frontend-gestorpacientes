@@ -6,7 +6,7 @@ document.getElementById('borrarTabla').addEventListener('click', function () {
             fila.remove();
         }
         alert("Tabla borrada");
-        console.log(filas);
+        //console.log(filas);
     } else {
         alert("No hay datos por borrar");
     }
