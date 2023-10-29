@@ -10,17 +10,19 @@ document.getElementById('cargarArchivo').addEventListener('click', function () {
 
             reader.onload = function (e) {
                 var contenido = e.target.result;
-                var tabla = document.getElementById('tabla-pacientes');
                 var lineas = contenido.split('\n');
-                for (var i = 1; i < lineas.length-1; i++) {
+                for (var i = 1; i < lineas.length - 1; i++) {
+                    var tabla = document.getElementById('tabla-pacientes');
                     var datos = lineas[i].split(',');
                     var paciente = obtenerdatos(datos);
                     var pacienteTr = construirTr(paciente);
+                    //console.log(tabla);
                     tabla.appendChild(pacienteTr);
                     console.log("Datos cargados");
                     imcComprobation();
                 }
                 alert("Se agregaron nuevos datos");
+                console.log(tabla);
             };
         }
     });

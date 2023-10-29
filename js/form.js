@@ -31,7 +31,9 @@ function capturarDatosPaciente(form) {
 
 function construirTr(paciente) {
     var num_pacientes = document.getElementsByClassName("paciente");
-
+    if (num_pacientes == null) {
+        num_pacientes = 0;
+    }
     //crear el td
     var pacienteTr = document.createElement("tr");
 

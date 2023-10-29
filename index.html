@@ -19,7 +19,7 @@
 			<section class="container">
 				<h2>Mis pacientes</h2>
 				<input type="text" id="buscador" placeholder="Buscar una palabra" class="campo campo-medio">
-				<table>
+				<table id="titles">
 					<thead>
 						<tr>
 							<th>#</th>
@@ -76,7 +76,10 @@
 						</tr>
 					</tbody>
 				</table>
-				<button id="cargarArchivo" class="boton bto-principal">Cargar Archivo</button>
+				<div class="botones">
+					<button id="cargarArchivo" class="boton bto-principal">Cargar Archivo</button>
+					<button id="borrarTabla" class="boton bto-secondary">Borrar Tabla</button>
+				</div>
 			</section>
 
 			<section class="container">
@@ -136,5 +139,6 @@
 		<script src="./js/eliminar-fila.js"></script>
 		<script src="./js/buscador.js"></script>
 		<script src="./js/cargar-datos.js"></script>
+		<script src="./js/borrar-tabla.js"></script>
 	</body>
 </html>

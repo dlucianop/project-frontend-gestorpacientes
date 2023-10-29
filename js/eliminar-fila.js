@@ -1,5 +1,4 @@
-var tabla = document.getElementById("tabla-pacientes");
-tabla.addEventListener("dblclick", function (event) {
+document.getElementById("tabla-pacientes").addEventListener("dblclick", function (event) {
     var fila = event.target.closest('tr');
     if (fila) {
         var confirmacion = confirm("¿Seguro que deseas eliminar esta fila?");
@@ -8,9 +7,9 @@ tabla.addEventListener("dblclick", function (event) {
             recorridoFila(fila);
             console.log("Fila eliminada")
             fila.classList.add('fade-out');
-                setTimeout(function () {
-                    fila.remove();
-                }, 300); 
+            setTimeout(function () {
+                fila.remove();
+            }, 300); 
         }
     }
 });
